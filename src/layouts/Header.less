@@ -1,0 +1,254 @@
+.header-container {
+    float: right;
+    height: 100%;
+    .other-app {
+        float: right;
+        height: 18px;
+        width: 18px;
+        margin-top: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .header-user {
+        float: right;
+        cursor: pointer;
+        .header-user-icon {
+            position: relative;
+            top: 2px;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .header-user-down {
+            margin-left: 5px;
+            font-size: 6px;
+        }
+        .header-name {
+            font-size: 14px;
+        }
+    }
+    .header-time{
+        float: right;
+        margin-right: 20px;
+        cursor: pointer;
+        .time{
+            height: 30px;
+            text-align: center;
+            line-height: 10px;
+            padding-top: 16px;
+        }
+        .date{
+            height: 30px;
+            text-align: center;
+            line-height: 10px;
+            padding-top: 6px;
+        }
+    }
+    .header-divider {
+        float: right;
+        height: 14px;
+        margin: 24px 25px;
+    }
+    .header-set,
+    .header-playback {
+        position: relative;
+        top: 20px;
+        float: right;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .task-upload-area {
+        display: inline-block;
+        // width: 154px;
+        height: 100%;
+    }
+}
+.user-popover {
+    width: 160px;
+    .user-down {
+        cursor: pointer;
+        .user-down-item {
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            .user-icon {
+                position: relative;
+                top: 1px;
+                margin: 0 20px;
+            }
+            .user-backlog {
+                position: absolute;
+                right: 10px;
+                top: 21px;
+                height: 16px;
+                min-width: 20px;
+                padding: 0 5px;
+                background: #fd777f;
+                border-radius: 2px;
+                color: #fff;
+                line-height: 16px;
+            }
+        }
+    }
+    .ant-popover-inner-content {
+        padding: 0 !important;
+    }
+}
+.user-top {
+    top: 50px !important;
+}
+.tools-popover {
+    width: 160px;
+    .ant-popover-inner-content {
+        padding: 0px;
+    }
+    .tools {
+        cursor: pointer;
+        .tools-item {
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            .tool-icon {
+                position: relative;
+                top: 1px;
+                margin: 0 20px;
+            }
+        }
+    }
+}
+.themes-popover {
+    .ant-popover-inner-content {
+        padding: 0px;
+        .theme-list {
+            display: flex;
+            margin-bottom: 0;
+            padding: 16px;
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                &:nth-child(-n + 3) {
+                    margin-right: 24px;
+                }
+                .icon-wrapper {
+                    display: inline-block;
+                    height: 24px;
+                    width: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background: gray;
+                }
+                .theme-name {
+                    margin-top: 8px;
+                    line-height: 1;
+                    font-size: 12px;
+                }
+                &.blue {
+                    .icon-wrapper {
+                        background: #0e8ac1;
+                    }
+                }
+                &.light {
+                    .icon-wrapper {
+                        background: #efefef;
+                    }
+                }
+                &.dark {
+                    .icon-wrapper {
+                        background: #1f1f1f;
+                    }
+                }
+                &.custom {
+                    .icon-wrapper {
+                        background-image: linear-gradient(163deg, #FFFFFF 0%, #585858 100%);
+                    }
+                }
+            }
+        }
+    }
+    &.dark {
+        .ant-popover-inner {
+            background: #333333;
+            .theme-list {
+                &-item {
+                    .theme-name {
+                        opacity: 0.5;
+                    }
+                    &.dark {
+                        .icon-select {
+                            color: #fff;
+                        }
+                        .theme-name {
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    &.blue {
+        .ant-popover-inner {
+            background: #0B2030;
+            .theme-list {
+                &-item {
+                    .theme-name {
+                        opacity: 0.5;
+                    }
+                    &.blue {
+                        .icon-select {
+                            color: #fff;
+                        }
+                        .theme-name {
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    &.light {
+        .ant-popover-inner {
+            background: #FFFFFF;
+            .theme-list {
+                &-item {
+                    .theme-name {
+                        opacity: 0.5;
+                    }
+                    &.light {
+                        .icon-select {
+                            color: #09AEF9;
+                        }
+                        .theme-name {
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    &.custom {
+        .ant-popover-inner {
+            background: #FFFFFF;
+            .theme-list {
+                &-item {
+                    .theme-name {
+                        opacity: 0.5;
+                    }
+                    &.custom {
+                        .icon-select {
+                            color: #fff;
+                        }
+                        .theme-name {
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
