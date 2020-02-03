@@ -4,14 +4,12 @@ import createRoute from "./utils/createRoute";
 const app = window.global_app;
 const routes = [
   {
-    path: "/",
+    path: "/index",
     title: "首页",
     component: dynamic({
       app,
-      component: () => import("./pages/index")
-      // models: () => [
-      //     import(""),
-      // ]
+      component: () => import("./pages/index/index"),
+      models: () => [import("./pages/index/model.js")]
     }),
     children: []
   },
@@ -20,10 +18,8 @@ const routes = [
     title: "快速开始",
     component: dynamic({
       app,
-      component: () => import("./pages/quickStart/index")
-      // models: () => [
-      //     import(""),
-      // ]
+      component: () => import("./pages/quickStart/index"),
+      models: () => [import("./pages/quickStart/model.js")]
     }),
     children: []
   }

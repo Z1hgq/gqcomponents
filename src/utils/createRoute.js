@@ -14,9 +14,7 @@ export default function createRoute(routes) {
     }
   ];
   return () => {
-    window.global_app._history.listen((location, action) => {
-      console.log(`The current URL is ${location.pathname}${location.search}${location.hash}`);
-    });
+    // window.global_app._history.listen((location, action) => {});
     return <Router history={window.global_app._history}>{create(routes)}</Router>;
   };
   function create(routes) {

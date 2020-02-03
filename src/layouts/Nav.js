@@ -8,8 +8,8 @@ const Nav = props => {
   const [data, setData] = useState([
     {
       id: 4,
-      name: "Antd Design of React",
-      path: "/",
+      name: "gqcomponents",
+      path: "/index",
       icon: "",
       active: false,
       subShow: false,
@@ -48,6 +48,13 @@ const Nav = props => {
       ]
     }
   ]);
+
+  useEffect(() => {
+    if (props.location.pathname === "/") {
+      props.history.push("./index");
+    }
+  }, []);
+
   const getActiveKey = url => {
     let key;
     for (const e of data) {

@@ -13,6 +13,7 @@ export default function Layout(props) {
   if (pageItem) {
     return children;
   }
+  console.log(children);
   return (
     <div className="ceiba3-layout">
       <div className="ceiba3-layout-header">
