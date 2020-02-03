@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.less";
 import Nav from "./Nav";
 import Header from "./Header";
@@ -17,7 +17,10 @@ export default function Layout(props) {
     <div className="ceiba3-layout">
       <div className="ceiba3-layout-header">
         <div className="img-box">
-          <img className="logo" src={"../assets/yay.jpg"} />
+          <img
+            className="logo"
+            src={"https://avatars2.githubusercontent.com/u/26574371?s=40&v=4"}
+          />
         </div>
         <span className="title-sub">{""}</span>
         <Header />
