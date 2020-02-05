@@ -3,6 +3,8 @@ import "./index.less";
 import Nav from "./Nav";
 import Header from "./Header";
 
+const appName = "gqcomponents";
+
 export default function Layout(props) {
   const {
     children,
@@ -13,7 +15,6 @@ export default function Layout(props) {
   if (pageItem) {
     return children;
   }
-  console.log(children);
   return (
     <div className="ceiba3-layout">
       <div id="header">
@@ -23,7 +24,7 @@ export default function Layout(props) {
             src={"https://avatars2.githubusercontent.com/u/26574371?s=40&v=4"}
           />
         </div>
-        <span className="title-sub">{""}</span>
+        <span className="title-sub">{appName}</span>
         <Header />
       </div>
       <div className="ceiba3-layout-content">
