@@ -16,7 +16,7 @@ export default function Layout(props) {
   console.log(children);
   return (
     <div className="ceiba3-layout">
-      <div className="ceiba3-layout-header">
+      <div id="header">
         <div className="img-box">
           <img
             className="logo"
