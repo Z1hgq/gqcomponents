@@ -45,31 +45,7 @@ const Nav = props => {
           name: "通用",
           options: [
             { id: 2, name: "Button 按钮", path: "/button", active: false },
-            { id: 7, name: "Button 按钮", path: "/button", active: false },
-            { id: 8, name: "Button 按钮", path: "/button", active: false },
-            { id: 9, name: "Button 按钮", path: "/button", active: false },
-            { id: 10, name: "Button 按钮", path: "/button", active: false },
-            { id: 11, name: "Button 按钮", path: "/button", active: false },
-            { id: 12, name: "Button 按钮", path: "/button", active: false },
-            { id: 13, name: "Button 按钮", path: "/button", active: false },
-            { id: 14, name: "Button 按钮", path: "/button", active: false },
-            { id: 15, name: "Button 按钮", path: "/button", active: false },
-            { id: 16, name: "Button 按钮", path: "/button", active: false },
-            { id: 17, name: "Button 按钮", path: "/button", active: false },
-            { id: 18, name: "Button 按钮", path: "/button", active: false },
-            { id: 19, name: "Button 按钮", path: "/button", active: false },
-            { id: 20, name: "Button 按钮", path: "/button", active: false },
-            { id: 21, name: "Button 按钮", path: "/button", active: false },
-            { id: 22, name: "Button 按钮", path: "/button", active: false },
-            { id: 23, name: "Button 按钮", path: "/button", active: false },
-            { id: 24, name: "Button 按钮", path: "/button", active: false },
-            { id: 25, name: "Button 按钮", path: "/button", active: false },
-            { id: 26, name: "Button 按钮", path: "/button", active: false },
-            { id: 27, name: "Button 按钮", path: "/button", active: false },
-            { id: 28, name: "Button 按钮", path: "/button", active: false },
-            { id: 29, name: "Button 按钮", path: "/button", active: false },
-            { id: 30, name: "Button 按钮", path: "/button", active: false },
-            { id: 31, name: "Button 按钮", path: "/button", active: false }
+            { id: 7, name: "Button 按钮", path: "/button2", active: false }
           ]
         }
       ]

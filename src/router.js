@@ -2,6 +2,9 @@ import dynamic from "dva/dynamic";
 import createRoute from "./utils/createRoute";
 
 const app = window.global_app;
+// DO NOT USE ROOT ROUTE "/"
+// DO NOT USE ROOT ROUTE "/"
+// DO NOT USE ROOT ROUTE "/"
 const routes = [
   {
     path: "/index",
