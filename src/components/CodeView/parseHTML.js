@@ -1,4 +1,5 @@
-import parseDom from './parseDom';
+/* eslint-disable no-useless-escape */
+import parseDom from "./parseDom";
 
 function text(element) {
   return element.textContent || element.innerText;
@@ -18,7 +19,7 @@ export default function parseHTML(source) {
     };
   }
 
-  code = text(parseDom(findCode.join('')));
+  code = text(parseDom(findCode.join("")));
 
   const beforeHTML = source.match(/([\s\S]+)<!-+\ ?start-code\ ?-+>/gi);
   const afterHTML = source.match(/<!-+\ ?end-code\ ?-+>([\s\S]+)/gi);

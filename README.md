@@ -16,7 +16,7 @@ npm install
 3.启动本地服务器。
 
 ```bash
-npm run start
+npm run dev
 ```
 
 4.启动完成后打开浏览器访问 [http://localhost:8000](http://localhost:8000)。

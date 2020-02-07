@@ -12,7 +12,7 @@ const extractLess = new ExtractTextPlugin({
   disable: NODE_ENV === "development"
 });
 
-const docsPath = NODE_ENV === "development" ? "./assets" : "./";
+const docsPath = NODE_ENV === "development" ? "./dist" : "./";
 const plugins = [
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NamedModulesPlugin(),
@@ -55,7 +55,7 @@ const common = {
     publicPath: "/"
   },
   output: {
-    path: path.resolve(__dirname, "assets"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     publicPath: "./"
   },
