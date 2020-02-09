@@ -14,12 +14,10 @@ const Directory = props => {
       };
       D.push(d);
     }
-    console.log(D);
     setDirectories(D);
   }, []);
   useEffect(() => {
     const content = document.querySelector("#content_left");
-    console.log(content);
     content.addEventListener("scroll", function () {
       for (const d of Directories) {
         const e = document.querySelector(`#${d.id}`);
@@ -32,22 +30,20 @@ const Directory = props => {
   }, [Directories, document]);
   // jq方法跳转到锚点
   const link = id => {
-    console.log(document.querySelector(`#${id}`).getBoundingClientRect());
-    console.log(document.querySelector(`#content_left`).getBoundingClientRect());
-    console.log($(`#${id}`).offset().top);
-    $(`#content_left`).animate(
+    const scrollTop = $("#content_left").scrollTop(); // 父容器滚动距离
+    const dotop = $("#" + id).offset().top; // 滚动元素距离文档顶部距离
+    const hei = $("#content_left").offset().top; // 父容器距离文档顶部距离
+    $("#content_left").animate(
       {
-        scrollTop: $(`#${id}`).offset().top - 60
+        scrollTop: scrollTop + dotop - hei - 20
       },
       { duration: 500, easing: "swing" }
     );
-    return false;
   };
   // scrollIntoView
   const scrollIntoView = id => {
     const e = document.querySelector(`#${id}`);
     e.scrollIntoView(true);
-    console.log(id);
   };
   // 元素颜色高亮
   const active = id => {

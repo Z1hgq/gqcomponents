@@ -20,7 +20,6 @@ export default function Layout(props) {
     const content = document.getElementById("content");
     content.style.height = document.body.clientHeight - 60 + "px";
     window.onresize = function () {
-      console.log(document.body.clientHeight);
       content.style.height = document.body.clientHeight - 60 + "px";
     };
   }, []);
