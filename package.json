@@ -13,6 +13,7 @@
     "classnames": "^2.2.5",
     "codemirror": "^5.32.0",
     "dva": "^2.4.1",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.5",
     "postcss-loader": "^3.0.0",
     "prop-types": "^15.6.0",

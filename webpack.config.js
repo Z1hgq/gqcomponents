@@ -50,8 +50,10 @@ const common = {
   entry: path.resolve(__dirname, "src/"),
   devServer: {
     hot: true,
+    open: true,
+    historyApiFallback: true,
     disableHostCheck: true,
-    contentBase: path.resolve(__dirname, ""),
+    contentBase: path.resolve(__dirname, "./"),
     publicPath: "/"
   },
   output: {

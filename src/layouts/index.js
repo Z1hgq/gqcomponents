@@ -10,6 +10,7 @@ export default function Layout(props) {
     children,
     location: { pathname }
   } = props;
+  // _page内的url不需要默认布局
   const _pages = [];
   const pageItem = _pages.find(item => pathname.indexOf(item) > -1);
   if (pageItem) {
@@ -39,7 +40,9 @@ export default function Layout(props) {
         <div className="nav">
           <Nav />
         </div>
-        <div className="content">{children}</div>
+        <div className="content" id="content_left">
+          <div className="nav-content">{children}</div>
+        </div>
       </div>
     </div>
   );

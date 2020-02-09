@@ -15,7 +15,11 @@ export default function createRoute(routes) {
   ];
   return () => {
     // window.global_app._history.listen((location, action) => {});
-    return <Router history={window.global_app._history}>{create(routes)}</Router>;
+    return (
+      <Router history={window.global_app._history}>
+        {create(routes)}
+      </Router>
+    );
   };
   function create(routes) {
     return (

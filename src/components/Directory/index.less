@@ -1,0 +1,36 @@
+.directories {
+  display: inline-block;
+  position: fixed;
+  width: 150px;
+  top: 80px;
+  right: 20px;
+  ul {
+    margin: 16px 0;
+    padding-left: 0;
+    list-style: none;
+    border-left: 1px solid #ebedf0;
+    li {
+      margin-left: 0;
+      padding-left: 0;
+      line-height: 1.5;
+      list-style: none;
+      a {
+        display: block;
+        width: 130px;
+        margin-left: -1px;
+        padding-left: 16px;
+        overflow: hidden;
+        color: #314659;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border-left: 1px solid transparent;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+      }
+      .current {
+        color: #1890ff;
+        border-color: #1890ff;
+      }
+    }
+  }
+}

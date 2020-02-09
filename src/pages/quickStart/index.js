@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "dva";
 import CodeView from "@components/CodeView";
+import Directory from "@components/Directory";
 import { Button } from "antd";
 
 import "@components/CodeView/less/index.less";
@@ -21,6 +22,7 @@ const quickStart = () => {
       >
         {require("./example.md")}
       </CodeView>
+      <Directory />
     </div>
   );
 };
