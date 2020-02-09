@@ -25,6 +25,16 @@ const routes = [
       models: () => [import("./pages/quickStart/model.js")]
     }),
     children: []
+  },
+  {
+    path: "/code-view",
+    title: "CodeView",
+    component: dynamic({
+      app,
+      component: () => import("./pages/codeView/index"),
+      models: () => [import("./pages/codeView/model.js")]
+    }),
+    children: []
   }
 ];
 

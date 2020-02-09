@@ -27,7 +27,7 @@ const Nav = props => {
     {
       id: 6,
       name: "项目实践",
-      path: "/practice",
+      path: "/project-practice",
       icon: "",
       active: false,
       subShow: false,
@@ -43,10 +43,7 @@ const Nav = props => {
         {
           id: 1,
           name: "通用",
-          options: [
-            { id: 2, name: "Button 按钮", path: "/button", active: false },
-            { id: 7, name: "Button 按钮", path: "/button2", active: false }
-          ]
+          options: [{ id: 2, name: "CodeView", path: "/code-view", active: false }]
         }
       ]
     }
