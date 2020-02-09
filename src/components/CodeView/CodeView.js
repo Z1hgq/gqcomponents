@@ -147,7 +147,7 @@ class CodeView extends React.Component {
     } = this.props;
     const { showCode, beforeHTML, afterHTML } = this.state;
     const icon = (
-      <span class="code-expand-icon" onClick={this.handleShowCode}>
+      <span className="code-expand-icon" onClick={this.handleShowCode}>
         <img
           alt="expand code"
           src={
@@ -155,7 +155,7 @@ class CodeView extends React.Component {
               ? "https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg"
               : "https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg"
           }
-          class="code-expand-icon-show"
+          className="code-expand-icon-show"
         />
       </span>
     );
