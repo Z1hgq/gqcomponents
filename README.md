@@ -19,4 +19,4 @@ npm install
 npm run dev
 ```
 
-4.启动完成后打开浏览器访问 [http://localhost:8000](http://localhost:8000)。
+4.启动完成后打开浏览器访问 [http://localhost:3100](http://localhost:3100), 可在`package.json`中的 scripts -> dev 配置中修改端口。
