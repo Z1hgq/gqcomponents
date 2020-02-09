@@ -1,7 +1,6 @@
 @import "~codemirror/lib/codemirror.css";
 @import "~codemirror/theme/base16-light.css";
 @import "~codemirror/theme/base16-dark.css";
-@import "~rsuite-theme/dist/less/index.less";
 
 .CodeMirror {
   padding: 10px;
@@ -15,7 +14,7 @@
 .code-view-wrapper {
   position: relative;
   margin-bottom: 18px;
-  border: 1px dashed #f1f1f1;
+  border: 1px dashed #ebedff;
   padding: 18px 18px 28px 18px;
   .code-view-toolbar {
     right: 0;
@@ -91,4 +90,72 @@ blockquote {
 .example-item {
   margin: 10px 0;
   width: 320px;
+}
+.markdown-table {
+  table {
+    margin: 2em 0;
+    font-size: 13px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+      monospace;
+    line-height: 1.5;
+    border: 1px solid #e8e8e8;
+    width: 100%;
+    empty-cells: show;
+    border-collapse: collapse;
+    border-spacing: 0;
+    thead {
+      display: table-header-group;
+      vertical-align: middle;
+      border-color: inherit;
+    }
+    tr {
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+      border: 1px solid #e8e8e8;
+      th {
+        padding: 12px;
+        color: #5c6b77;
+        font-weight: 500;
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.02);
+        text-align: left;
+        border: 1px solid #e8e8e8;
+      }
+    }
+    tbody {
+      tr {
+        line-height: 50px;
+      }
+    }
+  }
+}
+.code-expand-icon {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  vertical-align: top;
+  cursor: pointer;
+  img {
+    opacity: 0.55;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  img:hover {
+    opacity: 1;
+  }
 }

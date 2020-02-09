@@ -137,25 +137,56 @@ class CodeView extends React.Component {
   }
 
   render() {
-    const { className, style, showCodeIcon, buttonClassName, renderToolbar, theme } = this.props;
+    const {
+      className = "",
+      style,
+      showCodeIcon,
+      buttonClassName,
+      renderToolbar,
+      theme
+    } = this.props;
     const { showCode, beforeHTML, afterHTML } = this.state;
     const icon = (
-      <span>
-        <i className={classNames(this.addPrefix("icon"), this.addPrefix("icon-code"))} />
+      // <span>
+      //   <i className={classNames(this.addPrefix("icon"), this.addPrefix("icon-code"))} />
+      // </span>
+      <span class="code-expand-icon">
+        <img
+          alt="expand code"
+          src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg"
+          class="code-expand-icon-show"
+        />
+        <img
+          alt="expand code"
+          src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg"
+          class="code-expand-icon-hide"
+        />
+        >
       </span>
     );
 
     const showCodeButton = (
-      <button
-        className={classNames(this.addPrefix("btn"), this.addPrefix("btn-xs"), buttonClassName)}
-        onClick={this.handleShowCode}
-      >
-        {typeof showCodeIcon !== "undefined" ? showCodeIcon : icon}
-      </button>
+      // <button
+      //   className={classNames(this.addPrefix("btn"), this.addPrefix("btn-xs"), buttonClassName)}
+      //   onClick={this.handleShowCode}
+      // >
+      //   {typeof showCodeIcon !== "undefined" ? showCodeIcon : icon}
+      // </button>
+      <span class="code-expand-icon" onClick={this.handleShowCode}>
+        <img
+          alt="expand code"
+          src={
+            this.state.showCode
+              ? "https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg"
+              : "https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg"
+          }
+          class="code-expand-icon-show"
+        />
+      </span>
     );
 
     return (
-      <div className={className} style={style}>
+      <div className={`${className} markdown-table`} style={style}>
         <Markdown>{beforeHTML}</Markdown>
         <div className="code-view-wrapper">
           {this.renderExample()}

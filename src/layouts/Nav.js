@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Menu, Icon } from "antd";
+import { Menu, Icon, Button } from "antd";
 import { withRouter } from "react-router-dom";
+import "./Nav.less";
 
 const { SubMenu } = Menu;
 
@@ -10,7 +11,7 @@ const Nav = props => {
       id: 4,
       name: "gqcomponents",
       path: "/index",
-      icon: "",
+      icon: "dropbox",
       active: false,
       subShow: false,
       sub: []
@@ -19,7 +20,7 @@ const Nav = props => {
       id: 5,
       name: "快速上手",
       path: "/quick-start",
-      icon: "",
+      icon: "highlight",
       active: false,
       subShow: false,
       sub: []
@@ -28,7 +29,7 @@ const Nav = props => {
       id: 6,
       name: "项目实践",
       path: "/project-practice",
-      icon: "",
+      icon: "edit",
       active: false,
       subShow: false,
       sub: []
@@ -48,6 +49,7 @@ const Nav = props => {
       ]
     }
   ]);
+  const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
     if (props.location.pathname === "/") {
@@ -97,41 +99,66 @@ const Nav = props => {
       }
     }
   };
+  const toggleCollapsed = () => {
+    setCollapsed(!collapsed);
+  };
+  useEffect(() => {
+    const n = document.querySelector("#nav");
+    const cl = document.querySelector("#content_left");
+    if (collapsed) {
+      n.style.width = "80px";
+      cl.style.width = "calc(100% - 80px)";
+    } else {
+      n.style.width = "256px";
+      cl.style.width = "calc(100% - 256px)";
+    }
+  }, [collapsed]);
 
   return (
-    <Menu
-      onClick={handleClick}
-      style={{ width: 256 }}
-      selectedKeys={[getActiveKey(props.location.pathname)]}
-      defaultOpenKeys={["0"]}
-      mode="inline"
-    >
-      {data.map(e => {
-        return e.sub.length ? (
-          <SubMenu
-            key={e.id}
-            title={(
-              <span>
-                <Icon type={e.icon} />
-                <span>{e.name}</span>
-              </span>
-            )}
-          >
-            {e.sub.map(sub => {
-              return (
-                <Menu.ItemGroup key={sub.id} title={sub.name}>
-                  {sub.options.map(option => {
-                    return <Menu.Item key={option.id}>{option.name}</Menu.Item>;
-                  })}
-                </Menu.ItemGroup>
-              );
-            })}
-          </SubMenu>
-        ) : (
-          <Menu.Item key={e.id}>{e.name}</Menu.Item>
-        );
-      })}
-    </Menu>
+    <div className="nav-container">
+      <div className="btn-container">
+        <Button type="primary" onClick={toggleCollapsed} className="btn">
+          <Icon type={collapsed ? "menu-unfold" : "menu-fold"} onClick={toggleCollapsed} />
+        </Button>
+      </div>
+      <Menu
+        onClick={handleClick}
+        style={{ width: collapsed ? 80 : 256 }}
+        selectedKeys={[getActiveKey(props.location.pathname)]}
+        defaultOpenKeys={["0"]}
+        mode="inline"
+        inlineCollapsed={collapsed}
+      >
+        {data.map(e => {
+          return e.sub.length ? (
+            <SubMenu
+              key={e.id}
+              title={(
+                <span>
+                  <Icon type={e.icon} />
+                  <span>{e.name}</span>
+                </span>
+              )}
+            >
+              {e.sub.map(sub => {
+                return (
+                  <Menu.ItemGroup key={sub.id} title={sub.name}>
+                    {sub.options.map(option => {
+                      return <Menu.Item key={option.id}>{option.name}</Menu.Item>;
+                    })}
+                  </Menu.ItemGroup>
+                );
+              })}
+            </SubMenu>
+          ) : (
+            <Menu.Item key={e.id}>
+              <Icon type={e.icon} />
+              <span>{e.name}</span>
+            </Menu.Item>
+          );
+        })}
+      </Menu>
+    </div>
   );
 };
 

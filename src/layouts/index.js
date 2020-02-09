@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.less";
 import Nav from "./Nav";
 import Header from "./Header";
@@ -36,7 +36,7 @@ export default function Layout(props) {
         <Header />
       </div>
       <div className="gq-layout-content" id="content">
-        <div className="nav">
+        <div className="nav" id="nav">
           <Nav />
         </div>
         <div className="content" id="content_left">

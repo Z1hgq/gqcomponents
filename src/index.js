@@ -2,6 +2,7 @@ import dva from "dva";
 import { createBrowserHistory } from "history";
 import "./index.less";
 import "antd/dist/antd.less";
+// import "rsuite-theme/dist/less/index.less";
 
 // 1. Initialize
 const app = dva({
