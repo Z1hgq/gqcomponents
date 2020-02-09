@@ -5,11 +5,11 @@ import "codemirror/addon/runmode/runmode";
 import CodeEditor from "./CodeEditor";
 import parseHTML from "./parseHTML";
 import Preview from "./Preview";
+import Markdown from "@components/MarkDownReader";
 
 const React = require("react");
 const PropTypes = require("prop-types");
 const ReactDOM = require("react-dom");
-const { Markdown } = require("react-markdown-reader");
 const classNames = require("classnames");
 
 class CodeView extends React.Component {
@@ -147,31 +147,6 @@ class CodeView extends React.Component {
     } = this.props;
     const { showCode, beforeHTML, afterHTML } = this.state;
     const icon = (
-      // <span>
-      //   <i className={classNames(this.addPrefix("icon"), this.addPrefix("icon-code"))} />
-      // </span>
-      <span class="code-expand-icon">
-        <img
-          alt="expand code"
-          src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg"
-          class="code-expand-icon-show"
-        />
-        <img
-          alt="expand code"
-          src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg"
-          class="code-expand-icon-hide"
-        />
-        >
-      </span>
-    );
-
-    const showCodeButton = (
-      // <button
-      //   className={classNames(this.addPrefix("btn"), this.addPrefix("btn-xs"), buttonClassName)}
-      //   onClick={this.handleShowCode}
-      // >
-      //   {typeof showCodeIcon !== "undefined" ? showCodeIcon : icon}
-      // </button>
       <span class="code-expand-icon" onClick={this.handleShowCode}>
         <img
           alt="expand code"
@@ -184,6 +159,8 @@ class CodeView extends React.Component {
         />
       </span>
     );
+
+    const showCodeButton = typeof showCodeIcon !== "undefined" ? showCodeIcon : icon;
 
     return (
       <div className={`${className} markdown-table`} style={style}>

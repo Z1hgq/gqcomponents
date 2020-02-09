@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const HtmlwebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-const markdownRenderer = require("react-markdown-reader").renderer;
+const markdownRenderer = require("./src/components/MarkDownReader/renderer").renderer;
 
 const { NODE_ENV } = process.env;
 
