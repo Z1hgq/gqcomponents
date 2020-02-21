@@ -57,11 +57,13 @@ const Directory = props => {
   };
   // 判断元素是否出现在视窗中
   const isInViewPort = element => {
-    const viewWidth = window.innerWidth || document.documentElement.clientWidth;
-    const viewHeight = window.innerHeight || document.documentElement.clientHeight;
-    const { top, right, bottom, left } = element.getBoundingClientRect();
+    try {
+      const viewWidth = window.innerWidth || document.documentElement.clientWidth;
+      const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+      const { top, right, bottom, left } = element.getBoundingClientRect();
 
-    return top >= 0 && left >= 0 && right <= viewWidth && bottom <= viewHeight;
+      return top >= 0 && left >= 0 && right <= viewWidth && bottom <= viewHeight;
+    } catch (err) {}
   };
   return (
     <div className="directories">

@@ -31,7 +31,8 @@ class CodeView extends React.Component {
     theme: "light",
     delay: 0,
     babelTransformOptions: {
-      presets: ["stage-0", "react", "es2015"]
+      presets: ["stage-0", "react", "es2015"],
+      plugins: ["transform-class-properties"]
     }
   };
 
