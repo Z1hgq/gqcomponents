@@ -39,9 +39,9 @@ import { Button } from "antd";
 
 ## API
 
-| 属性                    | 类型      | 说明                               | 默认值                                      |
-| :---------------------- | :-------- | :--------------------------------- | :------------------------------------------ |
-| `theme`                 | `string`  | 设置主题，可选项： `light`, `dark` | `light`                                     |
-| `dependencies`          | `Object`  | 依赖的资源                         |                                             |
-| `showCode`              | `boolean` | 显示代码                           | `true`                                      |
-| `babelTransformOptions` | `Object`  | babel 配置参数 [options][babeljs]  | { presets: ['stage-0', 'react', 'es2015'] } |
+| 属性                    | 类型      | 说明                               | 默认值                                                                               |
+| :---------------------- | :-------- | :--------------------------------- | :----------------------------------------------------------------------------------- |
+| `theme`                 | `string`  | 设置主题，可选项： `light`, `dark` | `light`                                                                              |
+| `dependencies`          | `Object`  | 依赖的资源                         |                                                                                      |
+| `showCode`              | `boolean` | 显示代码                           | `true`                                                                               |
+| `babelTransformOptions` | `Object`  | babel 配置参数 [options][babeljs]  | { presets: ["stage-0", "react", "es2015"], plugins: ["transform-class-properties"] } |
