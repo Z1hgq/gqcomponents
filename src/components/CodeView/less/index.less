@@ -1,6 +1,6 @@
 @import "~codemirror/lib/codemirror.css";
-@import "~codemirror/theme/base16-light.css";
-@import "~codemirror/theme/base16-dark.css";
+@import "./dark.less";
+@import "./light.less";
 
 .CodeMirror {
   padding: 10px;
@@ -91,45 +91,7 @@ blockquote {
   margin: 10px 0;
   width: 320px;
 }
-.markdown-table {
-  table {
-    margin: 2em 0;
-    font-size: 13px;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-      monospace;
-    line-height: 1.5;
-    border: 1px solid #e8e8e8;
-    width: 100%;
-    empty-cells: show;
-    border-collapse: collapse;
-    border-spacing: 0;
-    thead {
-      display: table-header-group;
-      vertical-align: middle;
-      border-color: inherit;
-    }
-    tr {
-      display: table-row;
-      vertical-align: inherit;
-      border-color: inherit;
-      border: 1px solid #e8e8e8;
-      th {
-        padding: 12px;
-        color: #5c6b77;
-        font-weight: 500;
-        white-space: nowrap;
-        background: rgba(0, 0, 0, 0.02);
-        text-align: left;
-        border: 1px solid #e8e8e8;
-      }
-    }
-    tbody {
-      tr {
-        line-height: 50px;
-      }
-    }
-  }
-}
+
 .code-expand-icon {
   position: relative;
   display: inline-block;

@@ -28,7 +28,7 @@ class CodeView extends React.Component {
   };
 
   static defaultProps = {
-    theme: "light",
+    theme: "dark",
     delay: 0,
     babelTransformOptions: {
       presets: ["stage-0", "react", "es2015"],
@@ -164,8 +164,8 @@ class CodeView extends React.Component {
     const showCodeButton = typeof showCodeIcon !== "undefined" ? showCodeIcon : icon;
 
     return (
-      <div className={`${className} markdown-table`} style={style}>
-        <Markdown>{beforeHTML}</Markdown>
+      <div className={`${className}`} style={style}>
+        <Markdown codeTheme="a11y-light">{beforeHTML}</Markdown>
         <div className="code-view-wrapper">
           {this.renderExample()}
           <div className="code-view-toolbar">
@@ -176,11 +176,11 @@ class CodeView extends React.Component {
             key="jsx"
             onChange={this.handleCodeChange}
             className={`doc-code ${showCode ? "show" : ""}`}
-            theme={`base16-${theme}`}
+            theme={`${theme}`}
             code={this.state.code}
           />
         </div>
-        <Markdown>{afterHTML}</Markdown>
+        <Markdown codeTheme="a11y-light">{afterHTML}</Markdown>
       </div>
     );
   }

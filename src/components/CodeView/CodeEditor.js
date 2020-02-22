@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import CodeMirror from 'codemirror';
-import trim from 'lodash/trim';
+import React from "react";
+import PropTypes from "prop-types";
+import CodeMirror from "codemirror";
+import trim from "lodash/trim";
 
 class CodeEditor extends React.Component {
   static propTypes = {
@@ -18,18 +18,17 @@ class CodeEditor extends React.Component {
   static defaultProps = {
     matchBrackets: true,
     tabSize: 2,
-    theme: 'default'
+    theme: "dark"
   };
 
   componentDidMount() {
     const { lineNumbers, lineWrapping, matchBrackets, tabSize, readOnly, theme } = this.props;
-
     if (CodeMirror === undefined) {
       return;
     }
 
     this.editor = CodeMirror.fromTextArea(this.textarea, {
-      mode: 'jsx',
+      mode: "jsx",
       lineNumbers,
       lineWrapping,
       matchBrackets,
@@ -38,7 +37,7 @@ class CodeEditor extends React.Component {
       theme
     });
 
-    this.editor.on('change', this.handleChange);
+    this.editor.on("change", this.handleChange);
   }
 
   componentDidUpdate() {
