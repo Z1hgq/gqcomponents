@@ -15,7 +15,7 @@ const codeView = () => {
           presets: ["stage-0", "react", "es2015"]
         }}
         showCode
-        theme="light"
+        theme="dark"
         dependencies={{
           Button
         }}
