@@ -14,7 +14,6 @@ exports.renderer = (languages = defalutLanguages) => {
     if (lang === "html") {
       lang = "xml";
     }
-
     const hlCode = lang ? hl.highlight(lang, code).value : hl.highlightAuto(code).value;
     return `<div class="doc-highlight"><pre><code class="${lang ||
       ""}">${hlCode}</code></pre></div>`;
