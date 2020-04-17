@@ -12,7 +12,7 @@ const codeView = () => {
     <div className="code-view">
       <CodeView
         babelTransformOptions={{
-          presets: ["stage-0", "react", "es2015"]
+          presets: ["@babel/stage-0", "@babel/react", "@babel/preset-env"]
         }}
         showCode
         theme="dark"

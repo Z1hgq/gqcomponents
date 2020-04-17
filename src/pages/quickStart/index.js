@@ -12,8 +12,8 @@ const quickStart = () => {
     <div className="quick-start">
       <CodeView
         babelTransformOptions={{
-          presets: ["stage-0", "react", "es2015"],
-          plugins: ["transform-class-properties"]
+          presets: ["@babel/stage-0", "@babel/react", "@babel/preset-env"],
+          plugins: ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-class-properties"]
         }}
         showCode
         theme="light"
