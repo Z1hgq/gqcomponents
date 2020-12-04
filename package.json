@@ -13,7 +13,7 @@
     "classnames": "^2.2.5",
     "codemirror": "^5.32.0",
     "dva": "^2.4.1",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "jquery": "^3.4.1",
     "lodash": "^4.17.5",
     "marked": "^0.8.0",
